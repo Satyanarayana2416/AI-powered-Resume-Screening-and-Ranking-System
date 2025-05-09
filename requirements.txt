@@ -1,4 +1,9 @@
 streamlit
-PyPDF2
-pandas
+nltk
+textblob
+transformers
+numpy
 scikit-learn
+pypdf2
+pandas
+matplotlib
