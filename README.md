@@ -1,54 +1,163 @@
-# AI-powered-Resume-Screening-and-Ranking-System
-An AI-powered Resume Screening and Ranking System uses machine learning to analyze resumes for skills, experience, and qualifications. It ranks candidates based on criteria, reducing recruitment time and improving accuracy while ensuring unbiased and efficient hiring decisions.
+# AI Resume Screening and Ranking System
+The AI Resume Screening and Ranking System is an advanced application that leverages Natural Language Processing (NLP) and Machine Learning (ML) to evaluate and rank resumes based on their relevance to a job description. This tool is designed to automate and streamline the recruitment process by providing insights into candidate suitability, extracting key features, and generating actionable improvement suggestions.
 
 # To Run this File Follow These Steps
---->Required Software:- 
+Required Software:- 
 1)visual studio code
 2)python
 
-# Step:-1 
-Open the vscode and create a folder for your project name the folder as **"resume_ranking_project"**. 
-![image](https://github.com/user-attachments/assets/d15ca606-6398-46c5-bae0-0ed1eeee532c)
+# Features
+
+Resume Text Extraction: Extracts text from uploaded PDF resumes.
+
+Text Preprocessing: Cleans and tokenizes text for analysis.
+
+Feature Extraction: Evaluates resumes based on keyword matching, sentiment analysis, and other metrics.
+
+Skill Identification: Identifies relevant technical and soft skills.
+
+Resume Scoring and Ranking: Scores and ranks resumes based on their relevance to the job description.
+
+Improvement Suggestions: Provides tips to improve resumes.
+
+Visualization: Displays comparative analysis through charts and tables.
+
+# File Path Blue Print
+## Project Root Directory ##
+├── app.py                  # Main Streamlit application
+├── deep_learning.py        # Module for deep learning tasks (e.g., BERT embeddings)
+├── feature_extraction.py   # Module for text preprocessing and feature extraction
+├── requirements.txt        # List of required Python packages
+└── README.md               # Project documentation
+
+# Step-by-Step Code Execution
+
+## Step 1: Set Up the Environment ##
+1) **Install Python:** Ensure you have Python 3.8 or later installed.
+2) **Create a Virtual Environment:** python -m venv venv
+3) **Activate the Virtual Environment:**
+   For Windows:- .\venv\Scripts\activate
+   For Macos/Linux:- source venv/bin/activate
+## Step 2: Install Dependencies ##
+Install the required libraries using the **requirements.txt** file:
+pip install -r requirements.txt
+## Step 3: Run the Application ##
+Start the Streamlit app: streamlit run app.py
+
+# Detailed Explanation
+
+**1. Text Extraction and Preprocessing**
+
+*Module:* feature_extraction.py
+
+*Functionality:*
+
+Extracts text from PDF files using PyPDF2.
+
+Cleans text (removes special characters, converts to lowercase).
+
+Tokenizes and lemmatizes text using NLTK.
+
+**2. Feature Extraction**
+
+*Module:* feature_extraction.py
+
+**Key Features:**
+
+*Keyword Match Ratio:* Measures overlap between resume and job description keywords.
+
+*Sentiment Analysis:* Calculates polarity and subjectivity scores.
+
+*Education and Experience Scores:* Assesses educational background and work experience.
+
+**3. Deep Learning Integration**
+
+*Module:* deep_learning.py
+
+*Functionality:*
+
+Leverages BERT for semantic similarity between resumes and job descriptions.
+
+Computes embeddings and cosine similarity.
+
+**4. Streamlit App**
+
+*File:* app.py
+
+*Features:*
+
+Allows users to upload resumes and job descriptions.
+
+Displays ranked resumes in a table with detailed analysis.
+
+Provides visualizations of scores and identified skills.
+
+# Example Workflow
+
+**1)Upload Resumes and Job Description**
+
+Upload multiple PDF resumes.
+
+Enter or upload a job description.
+
+**2)Process Resumes**
+
+Click the "Process Resumes" button.
+
+The system extracts, preprocesses, and analyzes resumes.
+
+**3)View Results**
+
+Navigate to the "Results & Rankings" tab to view ranked resumes.
+
+Use the "Detailed Analysis" tab to analyze individual resumes.
+
+**4)Generate Improvement Suggestions**
+
+Receive actionable tips to enhance resume quality.
+
+# Additional Notes
+
+**1)Error Handling**
+
+Ensure all necessary NLTK resources (e.g., punkt, stopwords) are downloaded.
+
+Add missing libraries to requirements.txt and reinstall dependencies if needed.
+
+**2)File Requirements**
+
+Resumes: Must be in PDF format.
+
+Job Description: Can be plain text or PDF.
+
+# Requirements
+
+Python 3.8+
+
+**Libraries:**
+
+  Streamlit
+
+  PyPDF2
+
+  NLTK
+
+  TextBlob
+
+  Transformers
+
+  NumPy
+
+  Pandas
+
+# Future Enhancements
+
+Add support for other file formats (e.g., DOCX).
+
+Implement additional ML models for ranking.
+
+Provide export options for ranked results.
 
 
-# step:-2
-After created the above folders open the **vscode**. install the extensions jupyter(Microsoft), python(Microsoft).
 
-# step:- 3 Set Up the Environment
-Install the required libraries for your code:
 
-![image](https://github.com/user-attachments/assets/48788521-72ea-424c-af49-bb3b7551a9ff)
-
-Or if you're using a requirements.txt, include these:
-
-![image](https://github.com/user-attachments/assets/300afc18-da05-45f7-baec-f009adf12d13)
-
-After save the above requirements.txt run the below cmd
-
-![image](https://github.com/user-attachments/assets/a65317d3-d4ed-4ea8-a0a8-10eef1bddbc3)
-
-To setup the kernal:
-1) Activate Your Environment Navigate to your project folder and activate your virtual environment:
-
-On Windows: .\env\Scripts\activate
-
-On mac/linux: source env/bin/activate
-
-2) Install ipykernel Once your environment is activated, install ipykernel:- bash:- pip install ipykernel
-3) Add Your Environment to Jupyter Register the environment as a Jupyter kernel: Bash:- python -m ipykernel install --user --name=env --display-name "Python (resume_env)"
-4) Retry in Jupyter Notebook Restart your Jupyter Notebook and select the newly added kernel "Python (resume_env)" from the kernel selection menu.
-
-After setup the  environment run the import and from code it will be exicute.
-
-# step:- 4
-Run the all the codes in jupyter notebook after completion of the exicution it will shows one python file path click on it and save the python file as **"resume_ranking.py**.
-
-after run the python file in Terminal go to the **resume_ranking.py** saved folder 
-
-Ex:- if your file is saved in site-apps then you should navigate to the site-apps by using cd in terminal
-
-Then run the command: streamlit run file_name.py
-
-After running, Streamlit will provide a URL (usually http://localhost:8501/) that you can open in your web browser to see your app in action.
-
-# Thank You
